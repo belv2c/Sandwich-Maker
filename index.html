@@ -8,87 +8,98 @@
 <h1>Sandwich Maker</h1>
 <h3>Customize Your Order:</h3>
 
-<div class="bread-div">
+<!-- Sandwich Ingredient holders -->
+<div class="bread-div" id="breads">
 	<h4>Bread:</h4>
 		<label class="checkbox-inline">
-	      <input type="checkbox" value="">Wheat Bread
+	      <input type="checkbox" class="checkbox" id="wheat-box" value="">Wheat Bread
 	    </label>
 	    <label class="checkbox-inline">
-	      <input type="checkbox" value="">Sourdough Bread
+	      <input type="checkbox" class="checkbox" id="sourdough-box" value="">Sourdough Bread
 	    </label>
 	    <label class="checkbox-inline">
-	      <input type="checkbox" value="">Rye Bread
+	      <input type="checkbox" class="checkbox" id="rye-box" value="">Rye Bread
 	    </label>
 	    <label class="checkbox-inline">
-	      <input type="checkbox" value="">White Bread
+	      <input type="checkbox" class="checkbox" id="white-box" value="">White Bread
 	    </label>
 </div>
 
-<div class="meat-div">
+<div class="meat-div" id="meat-chooser">
 	<h4>Meat:</h4>
 		<label class="checkbox-inline">
-	      <input type="checkbox" value="">Turkey
+	      <input type="checkbox" class="checkbox" id="turkey-box" value="">Turkey
 	    </label>
 	    <label class="checkbox-inline">
-	      <input type="checkbox" value="">Bacon
+	      <input type="checkbox" class="checkbox" id="bacon-box" value="">Bacon
 	    </label>
 	    <label class="checkbox-inline">
-	      <input type="checkbox" value="">Ham
+	      <input type="checkbox" class="checkbox" id="ham-box" value="">Ham
 	    </label>
 	    <label class="checkbox-inline">
-	      <input type="checkbox" value="">Roast Beef
+	      <input type="checkbox" class="checkbox" id="beef-box" value="">Roast Beef
 	    </label>
 </div>
 
-<div class="cheese-div">
+<div class="cheese-div" id="cheese-chooser">
 	<h4>Cheese:</h4>
 		<label class="checkbox-inline">
-	      <input type="checkbox" value="">American
+	      <input type="checkbox" class="checkbox" id="american-box" value="">American
 	    </label>
 	    <label class="checkbox-inline">
-	      <input type="checkbox" value="">Cheddar
+	      <input type="checkbox" class="checkbox" id="cheddar-box" value="">Cheddar
 	    </label>
 	    <label class="checkbox-inline">
-	      <input type="checkbox" value="">Mozz
+	      <input type="checkbox" class="checkbox" id="mozz-box" value="">Mozz
 	    </label>
 	    <label class="checkbox-inline">
-	      <input type="checkbox" value="">Swiss
+	      <input type="checkbox" class="checkbox" id="swiss-box" value="">Swiss
 	    </label>
 	
 </div>
 
-<div class="condiment-div">
+<div class="condiment-div" id="condiment-chooser">
 	<h4>Condiments:</h4>
 		<label class="checkbox-inline">
-	      <input type="checkbox" value="">Ketchup
+	      <input type="checkbox" class="checkbox" id="ketchup-box" value="">Ketchup
 	    </label>
 	    <label class="checkbox-inline">
-	      <input type="checkbox" value="">Mayo
+	      <input type="checkbox" class="checkbox" id="mayo-box" value="">Mayo
 	    </label>
 	    <label class="checkbox-inline">
-	      <input type="checkbox" value="">BBQ
+	      <input type="checkbox" class="checkbox" id="bbq-box" value="">BBQ
 	    </label>
 	    <label class="checkbox-inline">
-	      <input type="checkbox" value="">Mustard
+	      <input type="checkbox" class="checkbox" id="mustard-box" value="">Mustard
 	    </label>
 </div>
 
-<div class="veggie-div">
+<div class="veggie-div" id="veggie-chooser">
 	<h4>Veggies:</h4>
 		<label class="checkbox-inline">
-	      <input type="checkbox" value="">Tomato
+	      <input type="checkbox" class="checkbox" id="tomato-box" value="">Tomato
 	    </label>
 	    <label class="checkbox-inline">
-	      <input type="checkbox" value="">Onion
+	      <input type="checkbox" class="checkbox" id="onion-box" value="">Onion
 	    </label>
 	    <label class="checkbox-inline">
-	      <input type="checkbox" value="">Lettuce
+	      <input type="checkbox" class="checkbox" id="lettuce-box" value="">Lettuce
 	    </label>
 	    <label class="checkbox-inline">
-	      <input type="checkbox" value="">Banana Peppers
+	      <input type="checkbox" class="checkbox" id="pepper-box" value="">Banana Peppers
 	    </label>
-	
 </div>
+
+<!-- Final Sandwich div -->
+<div class="output-sandwich" id="final-sandwich">
+	<h3 class="output-text">Final Sandwich:</h3>
+</div>
+
+<!--Final sandwich cost div-->
+<div class="output-cost" id="final-cost">
+	<h3 class="output-text">Total:</h3>
+</div>
+
 <script type="text/javascript" src="sandwichmaker.js"></script>
 <script type="text/javascript" src="bread.js"></script>
 <script type="text/javascript" src="meat.js"></script>
