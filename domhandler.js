@@ -17,13 +17,21 @@ var condimentChooser = document.getElementById("condiment-chooser");
 var veggieChooser = document.getElementById("veggie-chooser");
 
 
+/*for (var j = 0; j < finalSandwichProduct.length; j++) {
+  finalSandwichProduct[j].addEventListener("click", setSelectedTopping);
+}
+*/
 /* 
   A <select> element broadcasts a change event, so you listen for it
   and get the value of the topping from your augmented IIFE
 */
-meatChooser.addEventListener("change", function(event) {
+breadChooser.addEventListener("change", function(event) {
   // Get the value chosen from the DOM
-  selectedTopping = event.target.value;
+  selectedTopping = event.target.id;
+  selectedTopping = selectedTopping.split("");
+  console.log(event);
+
+
 
   // Determine the price of the topping chosen
 
