@@ -17,23 +17,37 @@ var condimentChooser = document.getElementById("condiment-chooser");
 var veggieChooser = document.getElementById("veggie-chooser");
 
 
-/*for (var j = 0; j < finalSandwichProduct.length; j++) {
-  finalSandwichProduct[j].addEventListener("click", setSelectedTopping);
-}
-*/
+/*breadChooser.addEventListener("change", function(event){
+	if(event.target.checked === true) {
+		selectedTopping.getBread(e.target.value);
+		}
+})*/
 /* 
   A <select> element broadcasts a change event, so you listen for it
   and get the value of the topping from your augmented IIFE
 */
-breadChooser.addEventListener("change", function(event) {
+/*breadChooser.addEventListener("change", function(event) {
   // Get the value chosen from the DOM
-  selectedTopping = event.target.id;
-  selectedTopping = selectedTopping.split("");
-  console.log(event);
+	/*function selectBread(event){*/
+		/*if (checkbox.checked === true){
+			order.push(event.target.value);
+		}
+		console.log(event);*/
+	
+/*})
+
+if (selectedTopping[1].classList.contains("box")){
+	let bread = SandwichMaker.getBread();
+	let breadObj = selectedTopping[1];
+	finalSandwichPrice += bread(breadObj);
+	finalSandwichProduct.innerHTML += `${breadObj} price`;
+	finalSandwichPrice = `${finalSandwichPrice}`;
+};*/
+  	/**/
 
 
 
   // Determine the price of the topping chosen
 
   // Add the topping to the SandwichMaker to increase the total price
-});
+/*});*/

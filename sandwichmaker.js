@@ -1,4 +1,4 @@
-console.log("Sandwich Maker");
+/*console.log("Sandwich Maker");
 
 var SandwichMaker = (function(maker) {
   // Private variable to store the price
@@ -14,3 +14,10 @@ var SandwichMaker = (function(maker) {
   console.log(totalPrice);
 })(SandwichMaker || {});
 
+*/
+
+let myBread = SandwichMaker.getBread();
+/*let myMeat 
+let myCheese
+let myVeggies
+let myCondiments*/
