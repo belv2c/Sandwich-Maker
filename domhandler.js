@@ -9,6 +9,7 @@ var finalSandwichProduct = document.getElementById("final-sandwich");
 // Variable to hold topping that the user selects
 var selectedTopping;
 
+
 // Get a reference to the <select> elements that have all the ingredient options
 var breadChooser = document.getElementById("bread-chooser");
 var meatChooser = document.getElementById("meat-chooser");
@@ -17,37 +18,42 @@ var condimentChooser = document.getElementById("condiment-chooser");
 var veggieChooser = document.getElementById("veggie-chooser");
 
 
-/*breadChooser.addEventListener("change", function(event){
-	if(event.target.checked === true) {
-		selectedTopping.getBread(e.target.value);
-		}
-})*/
-/* 
-  A <select> element broadcasts a change event, so you listen for it
-  and get the value of the topping from your augmented IIFE
-*/
-/*breadChooser.addEventListener("change", function(event) {
-  // Get the value chosen from the DOM
-	/*function selectBread(event){*/
-		/*if (checkbox.checked === true){
-			order.push(event.target.value);
-		}
-		console.log(event);*/
-	
-/*})
-
-if (selectedTopping[1].classList.contains("box")){
-	let bread = SandwichMaker.getBread();
-	let breadObj = selectedTopping[1];
-	finalSandwichPrice += bread(breadObj);
-	finalSandwichProduct.innerHTML += `${breadObj} price`;
-	finalSandwichPrice = `${finalSandwichPrice}`;
-};*/
-  	/**/
+breadChooser.addEventListener("change", function(event){
+  selectedTopping = event.target.value;
+  for (let key in myBread){
+  	if(selectedTopping === key && event.target.checked) {
+  		finalSandwichPrice += myBread[key];
+  		console.log(finalSandwichPrice);
+  		console.log(event.target.value);
+  }
+    }
+   })
 
 
+meatChooser.addEventListener("change", function(event){
+  if(event.target.checked === true) {
+    /*selectedTopping.getBread(e.target.value);*/
+    console.log("meat");
+    }
+})
 
-  // Determine the price of the topping chosen
+cheeseChooser.addEventListener("change", function(event){
+  if(event.target.checked === true) {
+    /*selectedTopping.getBread(e.target.value);*/
+    console.log("cheese");
+    }
+})
 
-  // Add the topping to the SandwichMaker to increase the total price
-/*});*/
+veggieChooser.addEventListener("change", function(event){
+  if(event.target.checked === true) {
+    /*selectedTopping.getBread(e.target.value);*/
+    console.log("veggies");
+    }
+})
+
+condimentChooser.addEventListener("change", function(event){
+  if(event.target.checked === true) {
+    /*selectedTopping.getBread(e.target.value);*/
+    console.log("condis");
+    }
+})
