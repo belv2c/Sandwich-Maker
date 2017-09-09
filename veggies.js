@@ -2,7 +2,7 @@ console.log("veggies");
 
 // This SandwichMaker IIFE augments the original one
 var SandwichMaker = (function(maker) {
-	const veggies = {"Tomato": .50, "Onion": .10, "Lettuce": .15, "Peppers": .40};
+	const veggies = {"Tomato": .50, "Onion": .10, "Lettuce": .15, "Banana-Peppers": .40};
 
 
 maker.getVeggies = function() {
