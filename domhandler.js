@@ -22,38 +22,55 @@ breadChooser.addEventListener("change", function(event){
   selectedTopping = event.target.value;
   for (let key in myBread){
   	if(selectedTopping === key && event.target.checked) {
-  		finalSandwichPrice += myBread[key];
+  		finalSandwichPrice = myBread[key];
   		console.log(finalSandwichPrice);
   		console.log(event.target.value);
-  }
     }
-   })
+   }
+})
 
 
 meatChooser.addEventListener("change", function(event){
-  if(event.target.checked === true) {
-    /*selectedTopping.getBread(e.target.value);*/
-    console.log("meat");
+  selectedTopping = event.target.value;
+  for (let key in myMeat){
+    if(selectedTopping === key && event.target.checked) {
+      finalSandwichPrice = myMeat[key];
+      console.log(finalSandwichPrice);
+      console.log(event.target.value);
     }
+  }
 })
 
 cheeseChooser.addEventListener("change", function(event){
-  if(event.target.checked === true) {
-    /*selectedTopping.getBread(e.target.value);*/
-    console.log("cheese");
+  selectedTopping = event.target.value;
+  for (let key in myCheese){
+    if(selectedTopping === key && event.target.checked) {
+      finalSandwichPrice = myCheese[key];
+      console.log(finalSandwichPrice);
+      console.log(event.target.value);
     }
-})
-
-veggieChooser.addEventListener("change", function(event){
-  if(event.target.checked === true) {
-    /*selectedTopping.getBread(e.target.value);*/
-    console.log("veggies");
-    }
+  }
 })
 
 condimentChooser.addEventListener("change", function(event){
-  if(event.target.checked === true) {
-    /*selectedTopping.getBread(e.target.value);*/
-    console.log("condis");
+  selectedTopping = event.target.value;
+  for (let key in myCondiments){
+    if(selectedTopping === key && event.target.checked) {
+      finalSandwichPrice = myCondiments[key];
+      console.log(finalSandwichPrice);
+      console.log(event.target.value);
     }
+  }
 })
+
+veggieChooser.addEventListener("change", function(event){
+  selectedTopping = event.target.value;
+  for (let key in myVeggies){
+    if(selectedTopping === key && event.target.checked) {
+      finalSandwichPrice = myVeggies[key];
+      console.log(finalSandwichPrice);
+      console.log(event.target.value);
+    }
+  }
+})
+
