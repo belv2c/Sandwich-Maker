@@ -5,6 +5,8 @@ var finalSandwichPrice = 0;
 
 // Variable to hold the final sandwich.
 var finalSandwichProduct = document.getElementById("final-sandwich");
+var totalCost = document.getElementById("final-cost");
+var submitButton = document.getElementById("submit");
 
 // Variable to hold topping that the user selects
 var selectedTopping;
@@ -22,60 +24,66 @@ breadChooser.addEventListener("change", function(event){
   selectedTopping = event.target.value;
   for (let key in myBread){
   	if(selectedTopping === key && event.target.checked) {
-  		finalSandwichPrice = myBread[key];
-  		console.log(finalSandwichPrice);
-  		console.log(event.target.value);
-    } else if(selectedTopping === key && event.target.checked === false)
-      finalSandwichPrice -= myBread[key];
-    }
-})
-
+  		finalSandwichPrice += myBread[key];
+      totalCost.innerHTML = `$${finalSandwichPrice}`;
+      finalSandwichProduct.innerHTML += `<p id="${key}">$${myBread[key]} ${key}</p>`;
+    } else if(selectedTopping === key && event.target.checked === false) {
+      finalSandwichPrice -= myBread[key];  
+  }
+ }
+});
 
 meatChooser.addEventListener("change", function(event){
   selectedTopping = event.target.value;
   for (let key in myMeat){
     if(selectedTopping === key && event.target.checked) {
-      finalSandwichPrice = myMeat[key];
-      console.log(finalSandwichPrice);
-      console.log(event.target.value);
-    } else if(selectedTopping === key && event.target.checked === false)
+      finalSandwichPrice += myMeat[key];
+      totalCost.innerHTML = `$${finalSandwichPrice}`;
+      finalSandwichProduct.innerHTML += `<p id="${key}">$${myMeat[key]} ${key}</p>`;
+    } else if(selectedTopping === key && event.target.checked === false) {
       finalSandwichPrice -= myMeat[key];
   }
-})
+ }
+});
 
 cheeseChooser.addEventListener("change", function(event){
   selectedTopping = event.target.value;
   for (let key in myCheese){
-    if(selectedTopping === key && event.target.checked) {
-      finalSandwichPrice = myCheese[key];
-      console.log(finalSandwichPrice);
-      console.log(event.target.value);
-    } else if(selectedTopping === key && event.target.checked === false)
+   if(selectedTopping === key && event.target.checked) {
+      finalSandwichPrice += myCheese[key];
+      totalCost.innerHTML = `$${finalSandwichPrice}`;
+      finalSandwichProduct.innerHTML += `<p id="${key}">$${myCheese[key]} ${key}</p>`;
+    } else if(selectedTopping === key && event.target.checked === false) {
       finalSandwichPrice -= myCheese[key];
-    }
-})
+  }
+ }
+});
 
 condimentChooser.addEventListener("change", function(event){
   selectedTopping = event.target.value;
   for (let key in myCondiments){
     if(selectedTopping === key && event.target.checked) {
-      finalSandwichPrice = myCondiments[key];
-      console.log(finalSandwichPrice);
-      console.log(event.target.value);
-  } else if(selectedTopping === key && event.target.checked === false)
+      finalSandwichPrice += myCondiments[key];
+      totalCost.innerHTML = `$${finalSandwichPrice}`;
+      finalSandwichProduct.innerHTML += `<p id="${key}">$${myCondiments[key]} ${key}</p>`;
+    } else if(selectedTopping === key && event.target.checked === false) {
       finalSandwichPrice -= myCondiments[key];
   }
-})
+ }
+});
 
 veggieChooser.addEventListener("change", function(event){
   selectedTopping = event.target.value;
   for (let key in myVeggies){
     if(selectedTopping === key && event.target.checked) {
-      finalSandwichPrice = myVeggies[key];
-      console.log(finalSandwichPrice);
-      console.log(event.target.value);
-    } else if(selectedTopping === key && event.target.checked === false)
+      finalSandwichPrice += myVeggies[key];
+      totalCost.innerHTML = `$${finalSandwichPrice}`;
+      finalSandwichProduct.innerHTML += `<p id="${key}">$${myVeggies[key]} ${key}</p>`;
+    } else if(selectedTopping === key && event.target.checked === false) {
       finalSandwichPrice -= myVeggies[key];
-    }
-})
+  }
+ }
+});
+
+
 
