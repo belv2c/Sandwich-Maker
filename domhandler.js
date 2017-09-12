@@ -25,8 +25,9 @@ breadChooser.addEventListener("change", function(event){
   		finalSandwichPrice = myBread[key];
   		console.log(finalSandwichPrice);
   		console.log(event.target.value);
+    } else if(selectedTopping === key && event.target.checked === false)
+      finalSandwichPrice -= myBread[key];
     }
-   }
 })
 
 
@@ -37,7 +38,8 @@ meatChooser.addEventListener("change", function(event){
       finalSandwichPrice = myMeat[key];
       console.log(finalSandwichPrice);
       console.log(event.target.value);
-    }
+    } else if(selectedTopping === key && event.target.checked === false)
+      finalSandwichPrice -= myMeat[key];
   }
 })
 
@@ -48,8 +50,9 @@ cheeseChooser.addEventListener("change", function(event){
       finalSandwichPrice = myCheese[key];
       console.log(finalSandwichPrice);
       console.log(event.target.value);
+    } else if(selectedTopping === key && event.target.checked === false)
+      finalSandwichPrice -= myCheese[key];
     }
-  }
 })
 
 condimentChooser.addEventListener("change", function(event){
@@ -59,7 +62,8 @@ condimentChooser.addEventListener("change", function(event){
       finalSandwichPrice = myCondiments[key];
       console.log(finalSandwichPrice);
       console.log(event.target.value);
-    }
+  } else if(selectedTopping === key && event.target.checked === false)
+      finalSandwichPrice -= myCondiments[key];
   }
 })
 
@@ -70,7 +74,8 @@ veggieChooser.addEventListener("change", function(event){
       finalSandwichPrice = myVeggies[key];
       console.log(finalSandwichPrice);
       console.log(event.target.value);
+    } else if(selectedTopping === key && event.target.checked === false)
+      finalSandwichPrice -= myVeggies[key];
     }
-  }
 })
 
