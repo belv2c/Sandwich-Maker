@@ -10,6 +10,8 @@ let totalCost = document.getElementById("final-cost");
 // Variable to hold topping that the user selects
 let selectedTopping;
 
+let seeYa = document.getElementById("bye");
+
 // Get a reference to the <select> elements that have all the ingredient options
 let breadChooser = document.getElementById("bread-chooser");
 let meatChooser = document.getElementById("meat-chooser");
@@ -26,10 +28,13 @@ breadChooser.addEventListener("change", (event) =>{
       totalCost.innerHTML = `$${finalSandwichPrice}`;
       finalSandwichProduct.innerHTML += `<p id="${key}">$${myBread[key]} ${key}</p>`;
     } else if(selectedTopping === key && event.target.checked === false) {
-      finalSandwichPrice -= myBread[key];  
+      finalSandwichPrice -= myBread[key]; 
+    } else if (selectedTopping === key && event.target.checked === false) {
+      console.log("false");
+      }
   }
- }
-});
+ });
+
 
 meatChooser.addEventListener("change", (event) =>{
   selectedTopping = event.target.value;
